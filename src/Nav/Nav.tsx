@@ -1,10 +1,11 @@
-export default function() {
+const Nav =  function() {
    return (
-      <div className="h-full bg-lightBlack border-r">
-         <ul className="text-white font-bold">
-            <li className="w-48 p-2">Test</li>
+      <div className="h-full bg-black-light border-r-2 border-black">
+         <ul className="text-white text-sm p-2">
+            <li className="w-48 p-2 py-1 bg-blue-600 rounded-md">Test</li>
          </ul>
       </div>
    );
 }
 
+export default Nav
