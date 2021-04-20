@@ -6,7 +6,8 @@ module.exports = {
          lightBlack: '#282828',
          defaultBlack: '#1E1E1E',
          lightestBlack: '#404040',
-         mainBlue: '#325DA8'
+         mainBlue: '#325DA8',
+         mainGrey: '#9E9E9E'
       },
       extend: {},
    },
