@@ -5,7 +5,8 @@ module.exports = {
       colors:{
          lightBlack: '#282828',
          defaultBlack: '#1E1E1E',
-         lightestBlack: '#404040'
+         lightestBlack: '#404040',
+         mainBlue: '#325DA8'
       },
       extend: {},
    },
