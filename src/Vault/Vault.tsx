@@ -1,4 +1,5 @@
 import {Password} from '../types/Objects'
+import Search from '../components/Search'
 
 const Vault =  function() {
    const passwords:Password[] = [
@@ -17,6 +18,7 @@ const Vault =  function() {
    ]
    return (
       <div className="h-full bg-black-light border-r-2 border-black">
+         <Search/>
          <ul className="text-white text-sm p-2">
             {passwords.map(password =>(
                <li className="w-80 flex items-center my-2 p-3 hover:bg-black-lightest cursor-pointer rounded-md">
