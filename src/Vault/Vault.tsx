@@ -1,10 +1,4 @@
-interface Password {
-   url: string
-   username: string
-   password: string
-   name: string
-}
-
+import {Password} from '../types/Objects'
 
 const Vault =  function() {
    const passwords:Password[] = [
