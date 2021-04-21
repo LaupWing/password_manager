@@ -4,7 +4,7 @@ const Nav =  function() {
    return (
       <div className="h-full bg-black-light border-r-2 border-black">
          <img src={LogoImage} alt="logo" className="w-20 m-auto my-4"/>
-         <ul className="text-white text-sm p-2">
+         <ul className="text-white text-sm p-2 px-4">
             <li className="w-48 p-2 py-1 bg-blue-600 rounded-md">All Items</li>
          </ul>
       </div>
