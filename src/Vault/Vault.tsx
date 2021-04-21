@@ -17,11 +17,21 @@ const Vault =  function() {
       },
    ]
    return (
-      <div className="h-full bg-black-light border-r-2 border-black">
-         <Search/>
-         <ul className="text-white text-sm p-2">
+      <div className="h-full bg-black-light border-r-2 border-black p-3">
+         <div className="my-4 flex text-mainGrey">
+            <div className="bg-black-lightest rounded flex p-2 flex-1">
+               <Search/>
+               <input 
+                  type="text" 
+                  className="bg-black-lightest text-sm flex-1 outline-none ml-2"
+                  placeholder="Search in Vault"
+               />
+            </div>
+            <button className="w-12 text-2xl text-white rounded ml-4 bg-blue-600">+</button>
+         </div>
+         <ul className="text-white text-sm">
             {passwords.map(password =>(
-               <li className="w-80 flex items-center my-2 p-3 hover:bg-black-lightest cursor-pointer rounded-md">
+               <li className="w-96 flex items-center my-2 p-3 hover:bg-black-lightest cursor-pointer rounded-md">
                   <img 
                      src={`https://logo.clearbit.com/${password.url}`}
                      className="w-10 rounded-md mr-2"
