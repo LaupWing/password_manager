@@ -17,7 +17,7 @@ const Vault =  function() {
       },
    ]
    return (
-      <div className="h-full bg-black-light border-r-2 border-black p-3">
+      <div className="h-full border-r-2 border-black p-3">
          <div className="my-4 flex text-mainGrey">
             <div className="bg-black-lightest rounded flex p-2 flex-1">
                <Search/>
