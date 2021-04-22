@@ -6,7 +6,7 @@ const Detail = () => {
    }
 
    return (
-      <div className="flex-1 flex justify-center items-start py-4 px-2">
+      <div className="flex-1 flex justify-center items-start py-4 px-2 pt-6">
          <div
             className="flex flex-col w-full"
             style={containerStyles}
