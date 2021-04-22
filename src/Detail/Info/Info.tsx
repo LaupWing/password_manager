@@ -6,14 +6,17 @@ const Info = () =>{
          <Field
             label="username"
             value="Locdragon@gmail.com"
+            password={false}
          />
          <Field
             label="password"
             value="test123"
+            password={true}
          />
          <Field
             label="website"
             value="gmail.com"
+            password={false}
          />
       </div>
    )
