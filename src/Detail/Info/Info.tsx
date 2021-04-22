@@ -3,7 +3,10 @@ import Field from './Field/Field'
 const Info = () =>{
    return (
       <div>
-         <Field/>
+         <Field
+            label="test"
+            type="test"
+         />
       </div>
    )
 }

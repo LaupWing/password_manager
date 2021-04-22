@@ -53,14 +53,14 @@ const Detail = () => {
                <img 
                   src="https://logo.clearbit.com/instagram.com" 
                   alt="instagram"
-                  className="w-20 rounded-md"
+                  className="w-16 rounded-md"
                />       
                <div className="ml-4">
                   <h2 className="text-2xl font-semibold tracking-wide">Instagram</h2>
                   <p className="text-mainGrey">Login</p>
                </div>
                <svg 
-                  className="w-10 h-10 my-auto ml-auto" 
+                  className="w-8 h-8 my-auto ml-auto" 
                   fill="none" 
                   stroke="currentColor" 
                   viewBox="0 0 24 24" 
