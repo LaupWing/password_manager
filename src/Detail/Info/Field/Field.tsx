@@ -1,5 +1,6 @@
 import { useState } from "react"
 import Eye from './Icons/Eye'
+import Duplicate from './Icons/Duplicate'
 
 interface FieldType {
    label: string
@@ -23,8 +24,9 @@ const Field = ({label, value, password}: FieldType) =>{
                <p className="text-white">{value}</p> 
             }
          </div>
-         <div className="text-white">
+         <div className="text-white flex items-center">
             <Eye/>
+            <Duplicate/>
          </div>
       </div>
    )
