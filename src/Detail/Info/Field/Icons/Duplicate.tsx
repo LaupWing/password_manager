@@ -1,6 +1,6 @@
 const Duplicate = () =>(
    <svg 
-      className="w-6 h-6 mx-1" 
+      className="w-6 h-6 mx-1 cursor-pointer" 
       fill="none" 
       stroke="currentColor" 
       viewBox="0 0 24 24" 

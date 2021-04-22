@@ -10,9 +10,15 @@ interface FieldType {
 
 const Field = ({label, value, password}: FieldType) =>{
    const [showPassword, setShowPassword] = useState(false)
+   const [showIcons, setShowIcons] = useState(false)
 
    return (
-      <div className="py-4 px-2 rounded-md hover:bg-black-light text-sm flex items-center justify-between">
+      <div 
+         className="py-4 px-2 rounded-md hover:bg-black-light text-sm flex 
+         items-center justify-between"
+         onMouseOver={()=>setShowIcons(true)}
+         onMouseOut={()=>setShowIcons(false)}
+      >
          <div>
             <h2 className="text-mainGrey font-bold tracking-wider capitalize mb-1">{label}</h2>
             {password ?
@@ -24,10 +30,12 @@ const Field = ({label, value, password}: FieldType) =>{
                <p className="text-white">{value}</p> 
             }
          </div>
-         <div className="text-white flex items-center">
-            <Eye/>
-            <Duplicate/>
-         </div>
+         {showIcons && 
+            <div className="text-white flex items-center pointer-events-none">
+               <Eye/>
+               <Duplicate/>
+            </div>
+         }
       </div>
    )
 }
