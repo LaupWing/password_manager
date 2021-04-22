@@ -31,9 +31,13 @@ const Field = ({label, value, password}: FieldType) =>{
             }
          </div>
          {showIcons && 
-            <div className="text-white flex items-center pointer-events-none">
-               <Eye/>
-               <Duplicate/>
+            <div className="text-white flex items-center">
+               <Eye
+                  setShowIcons={()=>setShowIcons(true)}
+               />
+               <Duplicate
+                  setShowIcons={()=>setShowIcons(true)}
+               />
             </div>
          }
       </div>

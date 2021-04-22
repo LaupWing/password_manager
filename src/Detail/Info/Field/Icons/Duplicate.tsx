@@ -1,5 +1,6 @@
-const Duplicate = () =>(
+const Duplicate = (props:any) =>(
    <svg 
+      onMouseOver={()=>props.setShowIcons(true)}
       className="w-6 h-6 mx-1 cursor-pointer" 
       fill="none" 
       stroke="currentColor" 

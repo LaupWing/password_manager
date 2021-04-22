@@ -1,5 +1,6 @@
-const Eye = () =>(
+const Eye = (props:any) =>(
    <svg 
+      onMouseOver={()=>props.setShowIcons(true)}
       className="w-5 h-5 mx-1 cursor-pointer" 
       fill="none" 
       stroke="currentColor" 
