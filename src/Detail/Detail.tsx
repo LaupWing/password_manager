@@ -1,4 +1,5 @@
 import CSS from 'csstype'
+import Info from './Info/Info'
 
 const Detail = () => {
    const containerStyles: CSS.Properties = {
@@ -49,7 +50,7 @@ const Detail = () => {
                   Delete
                </button>
             </div>
-            <header className="py-6 text-white flex border-b-2 border-black-lightest">
+            <header className="py-6 text-white flex">
                <img 
                   src="https://logo.clearbit.com/instagram.com" 
                   alt="instagram"
@@ -75,6 +76,7 @@ const Detail = () => {
                   </path>
                </svg>
             </header>
+            <Info/>
          </div>
       </div>
    )
