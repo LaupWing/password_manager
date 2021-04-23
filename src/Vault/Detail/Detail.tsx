@@ -57,7 +57,7 @@ const Detail = ({detail}:DetailProps) => {
             </div>
             <header className="py-6 text-white flex">
                <img 
-                  src="https://logo.clearbit.com/instagram.com" 
+                  src={`https://logo.clearbit.com/${detail.url}`} 
                   alt="instagram"
                   className="w-16 rounded-md"
                />       
