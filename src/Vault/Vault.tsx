@@ -3,7 +3,12 @@ import AllItems from './AllItems/AllItems'
 import Detail from './Detail/Detail'
 import {Password} from '../types/Objects'
 
-const Vault =  function() {
+type VaultProps = {
+   favorites: Password[]
+   addFavorites: Function
+}
+
+const Vault =  ({favorites, addFavorites}:VaultProps)=> {
    const [detail, setDetail] = useState<Password | false>(false)
 
    return (
@@ -15,6 +20,8 @@ const Vault =  function() {
          {detail && 
             <Detail
                detail={detail}
+               favorites={favorites}
+               addFavorites={addFavorites}
             />
          }
       </Fragment>

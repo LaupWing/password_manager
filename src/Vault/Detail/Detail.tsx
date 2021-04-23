@@ -4,12 +4,15 @@ import {Password} from '../../types/Objects'
 
 type DetailProps = {
    detail: Password
+   favorites: Password[]
+   addFavorites: Function
 }
 
-const Detail = ({detail}:DetailProps) => {
+const Detail = ({detail, favorites, addFavorites}:DetailProps) => {
    const containerStyles: CSS.Properties = {
       maxWidth: '500px'
    }
+   const inFavorites = favorites.find(x=>x===detail)
 
    return (
       <div className="flex-1 flex justify-center items-start py-4 px-2 pt-6">
@@ -66,9 +69,10 @@ const Detail = ({detail}:DetailProps) => {
                   <p className="text-mainGrey">Login</p>
                </div>
                <svg 
-                  className="w-8 h-8 my-auto ml-auto" 
+                  className={`w-8 h-8 my-auto ml-auto ${inFavorites ? 'fill-current text-yellow-400' : ''} cursor-pointer hover:text-yellow-400`}
+                  onClick={()=>addFavorites(detail)} 
                   fill="none" 
-                  stroke="currentColor" 
+                  stroke={inFavorites ? "none" : "currentColor"} 
                   viewBox="0 0 24 24" 
                   xmlns="http://www.w3.org/2000/svg"
                >

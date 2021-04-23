@@ -49,12 +49,12 @@ const Field = ({
             {eye && 
                <Eye
                   onClick={()=>setShowPassword(!showPassword)}
-                  />
+               />
                }
             {link && 
                <Link
                   onClick={()=>setShowPassword(!showPassword)}
-                  />
+               />
                }
             {duplicate && 
                <Duplicate
