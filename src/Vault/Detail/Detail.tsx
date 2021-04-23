@@ -1,6 +1,6 @@
 import CSS from 'csstype'
 import Info from './Info/Info'
-import {Password} from '../../types/Objects'
+import {Password} from '@/types/Objects'
 
 type DetailProps = {
    detail: Password

@@ -1,4 +1,4 @@
-import LogoImage from '../assets/lock.png'
+import LogoImage from '@/assets/lock.png'
 
 const Main =  function() {
    return (

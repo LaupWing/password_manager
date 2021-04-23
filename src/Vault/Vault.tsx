@@ -1,7 +1,7 @@
 import {Fragment, useState} from 'react'
 import AllItems from './AllItems/AllItems'
 import Detail from './Detail/Detail'
-import {Password} from '../types/Objects'
+import {Password} from '@/types/Objects'
 
 type VaultProps = {
    favorites: Password[]

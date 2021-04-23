@@ -1,5 +1,5 @@
 import Field from './Field/Field'
-import {Password} from '../../../types/Objects'
+import {Password} from '@/types/Objects'
 import {useEffect} from 'react'
 
 

@@ -1,5 +1,5 @@
-import {Password} from '../../types/Objects'
-import Search from '../../components/Search'
+import {Password} from '@/types/Objects'
+import Search from '@/components/Search'
 
 type AllItemsProps = {
    setDetail: Function
