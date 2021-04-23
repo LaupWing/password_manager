@@ -81,7 +81,9 @@ const Detail = ({detail}:DetailProps) => {
                   </path>
                </svg>
             </header>
-            <Info/>
+            <Info
+               detail={detail}
+            />
          </div>
       </div>
    )
