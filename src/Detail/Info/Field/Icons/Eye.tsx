@@ -1,6 +1,6 @@
 const Eye = () =>(
    <svg 
-      className="w-5 h-5 mx-1 cursor-pointer" 
+      className="w-5 h-5 mx-1 cursor-pointer hover:text-blue-600" 
       fill="none" 
       stroke="currentColor" 
       viewBox="0 0 24 24" 
