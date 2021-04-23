@@ -1,6 +1,5 @@
 import Nav from './Nav/Nav'
 import Vault from './Vault/Vault'
-import Detail from './Detail/Detail'
 import {Switch, Route} from 'react-router-dom'
 
 function App() {
@@ -16,7 +15,6 @@ function App() {
       <div className="App w-screen h-screen bg-black-default flex">
          <Nav/>
          <Vault/>
-         <Detail/>
       </div>
    );
 }
