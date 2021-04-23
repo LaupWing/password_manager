@@ -6,7 +6,20 @@ import {Switch, Route} from 'react-router-dom'
 import {Password} from './types/Objects'
 
 function App() {
-   const [favorites, setFavorites] = useState<Password[]>([])
+   const [favorites, setFavorites] = useState<Password[]>([
+      {
+         url: 'www.google.com',
+         username: 'locdragon@gmail.com',
+         password: 'test1',
+         name: 'Google'
+      },
+      {
+         url: 'www.instagram.com',
+         username: 'locdragon@gmail.com',
+         password: 'test1',
+         name: 'Instagram'
+      }
+   ])
 
    const addFavorites = (item:Password)=>{
       if(favorites.find(x=>x===item)){
