@@ -25,7 +25,7 @@ const Vault =  ({favorites, addFavorites}:VaultProps)=> {
             />
          }
       </Fragment>
-   );
+   )
 }
 
 export default Vault
