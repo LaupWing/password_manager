@@ -1,8 +1,8 @@
 import CSS from 'csstype'
 import Info from './Info/Info'
 import {Password} from '../../../types/Objects'
-import Edit from './Icons/Edit'
-import Delete from './Icons/Delete'
+import Edit from '@/components/Icons/Edit'
+import Delete from '@/components/Icons/Delete'
 
 type DetailProps = {
    detail: Password
