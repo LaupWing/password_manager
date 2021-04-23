@@ -31,7 +31,7 @@ const Field = ({
          onMouseOut={()=>setShowIcons(false)}
       >
          <div>
-            <h2 className="text-mainGrey font-bold tracking-wider capitalize mb-1">{label}</h2>
+            <h2 className="text-mainGrey font-bold tracking-wider capitalize mb-1 select-none">{label}</h2>
             {password ?
                <input 
                   type={showPassword ? "text" : "password"}
@@ -43,9 +43,21 @@ const Field = ({
          </div> 
          <div 
             className={`text-white flex items-center transform duration-200 ${showIcons ? 'translate-x-0 opacity-1' : 'translate-x-full opacity-0'}`}>
-            {eye && <Eye/>}
-            {link && <Link/>}
-            {duplicate && <Duplicate/>}
+            {eye && 
+               <Eye
+                  onClick={()=>setShowPassword(!showPassword)}
+                  />
+               }
+            {link && 
+               <Link
+                  onClick={()=>setShowPassword(!showPassword)}
+                  />
+               }
+            {duplicate && 
+               <Duplicate
+                  onClick={()=>setShowPassword(!showPassword)}
+               />
+            }
          </div>
       </div>
    )
