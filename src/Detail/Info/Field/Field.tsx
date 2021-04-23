@@ -15,7 +15,7 @@ const Field = ({label, value, password}: FieldType) =>{
    return (
       <div 
          className="py-4 px-2 rounded-md hover:bg-black-light text-sm flex 
-         items-center justify-between"
+         items-center justify-between overflow-hidden"
          onMouseOver={()=>setShowIcons(true)}
          onMouseOut={()=>setShowIcons(false)}
       >
@@ -29,17 +29,12 @@ const Field = ({label, value, password}: FieldType) =>{
                /> :
                <p className="text-white">{value}</p> 
             }
+         </div> 
+         <div 
+            className={`text-white flex items-center transform duration-200 ${showIcons ? 'translate-x-0 opacity-1' : 'translate-x-full opacity-0'}`}>
+            <Eye/>
+            <Duplicate/>
          </div>
-         {showIcons && 
-            <div className="text-white flex items-center">
-               <Eye
-                  setShowIcons={()=>setShowIcons(true)}
-               />
-               <Duplicate
-                  setShowIcons={()=>setShowIcons(true)}
-               />
-            </div>
-         }
       </div>
    )
 }
