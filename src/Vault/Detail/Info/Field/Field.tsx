@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Eye from './Icons/Eye'
 import Duplicate from './Icons/Duplicate'
 import Link from './Icons/Link'
@@ -22,6 +22,9 @@ const Field = ({
    }: FieldType) =>{
    const [showPassword, setShowPassword] = useState(false)
    const [showIcons, setShowIcons] = useState(false)
+   useEffect(() => {
+      setShowPassword(false)
+   }, [value])
 
    return (
       <div 

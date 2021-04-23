@@ -11,14 +11,26 @@ const AllItems =  ({setDetail, detail}:AllItemsProps)=> {
       {
          url: 'www.google.com',
          username:  'locdragon@gmail.com',
-         password: 'test',
+         password: 'test1',
          name: 'Google'
       },
       {
          url: 'www.instagram.com',
          username:  'locdragon@gmail.com',
-         password: 'test',
+         password: 'test1',
          name: 'Instagram'
+      },
+      {
+         url: 'www.facebook.com',
+         username:  'locdragon@gmail.com',
+         password: 'test3',
+         name: 'Facebook'
+      },
+      {
+         url: 'www.dribbble.com',
+         username:  'locdragon@gmail.com',
+         password: 'test4',
+         name: 'Dribble'
       },
    ]
    return (
@@ -37,7 +49,7 @@ const AllItems =  ({setDetail, detail}:AllItemsProps)=> {
          <ul className="text-white text-sm">
             {passwords.map((password,i) =>(
                <li 
-                  className={`w-80 flex items-center my-2 p-3 cursor-pointer rounded-md ${password === detail ? 'bg-blue-600' : 'hover:bg-black-lightest'}`}
+                  className={`w-80 flex items-center my-2 p-3 cursor-pointer rounded-md ${JSON.stringify(password) === JSON.stringify(detail) ? 'bg-blue-600' : 'hover:bg-black-lightest'}`}
                   key={i}
                   onClick={()=>setDetail(password)}
                >
