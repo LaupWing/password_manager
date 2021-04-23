@@ -30,8 +30,11 @@ const Vault =  function() {
             <button className="w-12 text-2xl text-white rounded ml-4 bg-blue-600">+</button>
          </div>
          <ul className="text-white text-sm">
-            {passwords.map(password =>(
-               <li className="w-80 flex items-center my-2 p-3 hover:bg-black-lightest cursor-pointer rounded-md">
+            {passwords.map((password,i) =>(
+               <li 
+                  className="w-80 flex items-center my-2 p-3 hover:bg-black-lightest cursor-pointer rounded-md"
+                  key={i}
+               >
                   <img 
                      src={`https://logo.clearbit.com/${password.url}`}
                      className="w-10 rounded-md mr-2"
