@@ -1,11 +1,17 @@
 import Field from './Field/Field'
 import {Password} from '../../../types/Objects'
+import {useEffect} from 'react'
+
 
 type InfoProps = {
    detail: Password
 }
 
 const Info = ({detail}:InfoProps) =>{
+   useEffect(()=>{
+      
+   },[detail])
+
    return (
       <div className="my-4 py-6 border-t-2 border-b-2 border-black-lightest">
          <Field

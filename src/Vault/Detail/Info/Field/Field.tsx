@@ -24,7 +24,7 @@ const Field = ({
    const [showIcons, setShowIcons] = useState(false)
    useEffect(() => {
       setShowPassword(false)
-   }, [value])
+   }, [])
 
    return (
       <div 
