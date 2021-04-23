@@ -16,19 +16,23 @@ function App() {
    }
    const routes = (
       <Switch>
-         <Route path="/"/>
-         <Route path="/auth"/>
-         <Route path="/"/>
+         <Route 
+            path="/" 
+            exact
+            component={()=>(
+               <Vault
+                  favorites={favorites}
+                  addFavorites={addFavorites}
+               />
+            )}
+         />
       </Switch>
    )
 
    return (
       <div className="App w-screen h-screen bg-black-default flex">
          <Nav/>
-         <Vault
-            favorites={favorites}
-            addFavorites={addFavorites}
-         />
+         {routes}
       </div>
    );
 }
