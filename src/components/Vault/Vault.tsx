@@ -15,7 +15,8 @@ const Vault =  ({
    passwords
 }:VaultProps)=> {
    const [detail, setDetail] = useState<Password | false>(false)
-
+   console.log('rendering vault')
+   console.log(detail)
    return (
       <Fragment>
          <Items

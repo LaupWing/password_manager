@@ -27,6 +27,7 @@ function App() {
       }else{
          setFavorites([...favorites, item])
       }
+      console.log(favorites)
    }
    const routes = (
       <Switch>
