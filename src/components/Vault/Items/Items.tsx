@@ -4,35 +4,15 @@ import Search from '@/components/Search'
 type AllItemsProps = {
    setDetail: Function
    detail: Password | boolean 
+   passwords: Password[]
 }
 
-const AllItems =  ({setDetail, detail}:AllItemsProps)=> {
-   const passwords:Password[] = [
-      {
-         url: 'www.google.com',
-         username:  'locdragon@gmail.com',
-         password: 'test1',
-         name: 'Google'
-      },
-      {
-         url: 'www.instagram.com',
-         username:  'locdragon@gmail.com',
-         password: 'test1',
-         name: 'Instagram'
-      },
-      {
-         url: 'www.facebook.com',
-         username:  'locdragon@gmail.com',
-         password: 'test3',
-         name: 'Facebook'
-      },
-      {
-         url: 'www.dribbble.com',
-         username:  'locdragon@gmail.com',
-         password: 'test4',
-         name: 'Dribble'
-      },
-   ]
+const AllItems =  ({
+   setDetail, 
+   detail,
+   passwords
+}:AllItemsProps)=> {
+   
    return (
       <div className="h-full border-r-2 border-black p-3 pt-6">
          <div className="mb-4 flex text-mainGrey">

@@ -6,9 +6,14 @@ import {Password} from '../../types/Objects'
 type VaultProps = {
    favorites: Password[]
    addFavorites: Function
+   passwords: Password[]
 }
 
-const Vault =  ({favorites, addFavorites}:VaultProps)=> {
+const Vault =  ({
+   favorites, 
+   addFavorites,
+   passwords
+}:VaultProps)=> {
    const [detail, setDetail] = useState<Password | false>(false)
 
    return (
@@ -16,7 +21,8 @@ const Vault =  ({favorites, addFavorites}:VaultProps)=> {
          <Items
             detail={detail}
             setDetail={setDetail}
-            />
+            passwords={passwords}
+         />
          {detail && 
             <Detail
                detail={detail}

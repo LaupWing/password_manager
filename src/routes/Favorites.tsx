@@ -1,5 +1,5 @@
 import Vault from '@/components/Vault/Vault'
-import {Password} from '@/types/Objects'
+import { Password } from '@/types/Objects'
 
 type AllItemsProps = {
    favorites: Password[]
@@ -7,33 +7,21 @@ type AllItemsProps = {
 }
 
 const AllItems = ({
-      favorites, 
-      addFavorites
-   }:AllItemsProps)=> {
-   const passwords:Password[] = [
+   favorites,
+   addFavorites
+}: AllItemsProps) => {
+   const passwords: Password[] = [
       {
          url: 'www.google.com',
-         username:  'locdragon@gmail.com',
+         username: 'locdragon@gmail.com',
          password: 'test1',
          name: 'Google'
       },
       {
          url: 'www.instagram.com',
-         username:  'locdragon@gmail.com',
+         username: 'locdragon@gmail.com',
          password: 'test1',
          name: 'Instagram'
-      },
-      {
-         url: 'www.facebook.com',
-         username:  'locdragon@gmail.com',
-         password: 'test3',
-         name: 'Facebook'
-      },
-      {
-         url: 'www.dribbble.com',
-         username:  'locdragon@gmail.com',
-         password: 'test4',
-         name: 'Dribble'
       },
    ]
    return (

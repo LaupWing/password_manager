@@ -1,6 +1,7 @@
 import {useState} from 'react'
 import Nav from './Nav/Nav'
-import Vault from './Vault/Vault'
+import AllItems from './routes/AllItems'
+import Favorites from './routes/Favorites'
 import {Switch, Route} from 'react-router-dom'
 import {Password} from './types/Objects'
 
@@ -20,7 +21,17 @@ function App() {
             path="/" 
             exact
             component={()=>(
-               <Vault
+               <AllItems
+                  favorites={favorites}
+                  addFavorites={addFavorites}
+               />
+            )}
+         />
+         <Route 
+            path="/favorites" 
+            exact
+            component={()=>(
+               <Favorites
                   favorites={favorites}
                   addFavorites={addFavorites}
                />
