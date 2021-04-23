@@ -7,9 +7,11 @@ interface FieldType {
    label: string
    value: string
    password: boolean
-   eye?: true | undefined
-   duplicate?: true | undefined
-   link?: true | undefined
+   eye?: true
+   duplicate?: true
+   link?: true
+   showPassword?: boolean
+   setShowPassword?: Function
 }
 
 const Field = ({
@@ -18,13 +20,11 @@ const Field = ({
       password,
       duplicate,
       link,
-      eye
+      eye,
+      showPassword,
+      setShowPassword
    }: FieldType) =>{
-   const [showPassword, setShowPassword] = useState(false)
    const [showIcons, setShowIcons] = useState(false)
-   useEffect(() => {
-      setShowPassword(false)
-   }, [])
 
    return (
       <div 
@@ -46,19 +46,19 @@ const Field = ({
          </div> 
          <div 
             className={`text-white flex items-center transform duration-200 ${showIcons ? 'translate-x-0 opacity-1' : 'translate-x-full opacity-0'}`}>
-            {eye && 
+            {(eye && setShowPassword) && 
                <Eye
                   onClick={()=>setShowPassword(!showPassword)}
                />
                }
             {link && 
                <Link
-                  onClick={()=>setShowPassword(!showPassword)}
-               />
+                  onClick={()=>{}}
+                  />
                }
             {duplicate && 
                <Duplicate
-                  onClick={()=>setShowPassword(!showPassword)}
+                  onClick={()=>{}}
                />
             }
          </div>

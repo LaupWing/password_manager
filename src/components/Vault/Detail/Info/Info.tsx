@@ -1,6 +1,6 @@
 import Field from './Field/Field'
 import {Password} from '@/types/Objects'
-import {useEffect} from 'react'
+import {useEffect, useState} from 'react'
 
 
 type InfoProps = {
@@ -9,8 +9,9 @@ type InfoProps = {
 
 const Info = ({detail}:InfoProps) =>{
    useEffect(()=>{
-      
+      setShowPassword(false)
    },[detail])
+   const [showPassword, setShowPassword] = useState(false)
 
    return (
       <div className="my-4 py-6 border-t-2 border-b-2 border-black-lightest">
@@ -25,6 +26,8 @@ const Info = ({detail}:InfoProps) =>{
             value={detail.password}
             password={true}
             duplicate={true}
+            showPassword={showPassword}
+            setShowPassword={setShowPassword}
             eye={true}
          />
          <Field
