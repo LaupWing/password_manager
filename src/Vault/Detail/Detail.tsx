@@ -1,7 +1,12 @@
 import CSS from 'csstype'
 import Info from './Info/Info'
+import {Password} from '../../types/Objects'
 
-const Detail = () => {
+type DetailProps = {
+   detail: Password
+}
+
+const Detail = ({detail}:DetailProps) => {
    const containerStyles: CSS.Properties = {
       maxWidth: '500px'
    }
@@ -57,7 +62,7 @@ const Detail = () => {
                   className="w-16 rounded-md"
                />       
                <div className="ml-4">
-                  <h2 className="text-2xl font-semibold tracking-wide">Instagram</h2>
+                  <h2 className="text-2xl font-semibold tracking-wide">{detail.name}</h2>
                   <p className="text-mainGrey">Login</p>
                </div>
                <svg 

@@ -1,7 +1,12 @@
 import {Password} from '../../types/Objects'
 import Search from '../../components/Search'
 
-const AllItems =  function() {
+type AllItemsProps = {
+   setDetail: Function
+   detail: Password | boolean 
+}
+
+const AllItems =  ({setDetail, detail}:AllItemsProps)=> {
    const passwords:Password[] = [
       {
          url: 'www.google.com',
@@ -32,8 +37,9 @@ const AllItems =  function() {
          <ul className="text-white text-sm">
             {passwords.map((password,i) =>(
                <li 
-                  className="w-80 flex items-center my-2 p-3 hover:bg-black-lightest cursor-pointer rounded-md"
+                  className={`w-80 flex items-center my-2 p-3 cursor-pointer rounded-md ${password === detail ? 'bg-blue-600' : 'hover:bg-black-lightest'}`}
                   key={i}
+                  onClick={()=>setDetail(password)}
                >
                   <img 
                      src={`https://logo.clearbit.com/${password.url}`}
