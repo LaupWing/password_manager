@@ -1,9 +1,10 @@
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import Eye from './Icons/Eye'
 import Duplicate from './Icons/Duplicate'
 import Link from './Icons/Link'
+import React from 'react'
 
-interface FieldType {
+interface FieldProps {
    label: string
    value: string
    password: boolean
@@ -14,7 +15,7 @@ interface FieldType {
    setShowPassword?: Function
 }
 
-const Field = ({
+const Field: React.FC<FieldProps> = ({
       label, 
       value, 
       password,
@@ -23,7 +24,7 @@ const Field = ({
       eye,
       showPassword,
       setShowPassword
-   }: FieldType) =>{
+   }) =>{
    const [showIcons, setShowIcons] = useState(false)
 
    return (

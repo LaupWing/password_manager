@@ -1,15 +1,16 @@
 import Vault from '@/components/Vault/Vault'
 import { Password } from '@/types/Objects'
+import React from  'react'
 
 type AllItemsProps = {
    favorites: Password[]
    addFavorites: Function
 }
 
-const AllItems = ({
+const AllItems:React.FC<AllItemsProps> = ({
    favorites,
    addFavorites
-}: AllItemsProps) => {
+}) => {
    return (
       <Vault
          favorites={favorites}

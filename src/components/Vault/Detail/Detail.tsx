@@ -3,6 +3,7 @@ import Info from './Info/Info'
 import {Password} from '../../../types/Objects'
 import Edit from '@/components/Icons/Edit'
 import Delete from '@/components/Icons/Delete'
+import React from 'react'
 
 type DetailProps = {
    detail: Password
@@ -10,7 +11,11 @@ type DetailProps = {
    addFavorites: Function
 }
 
-const Detail = ({detail, favorites, addFavorites}:DetailProps) => {
+const Detail: React.FC<DetailProps> = ({
+   detail, 
+   favorites, 
+   addFavorites
+}) => {
    const containerStyles: CSS.Properties = {
       maxWidth: '500px'
    }

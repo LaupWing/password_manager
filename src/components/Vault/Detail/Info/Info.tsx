@@ -1,13 +1,15 @@
 import Field from './Field/Field'
 import {Password} from '@/types/Objects'
 import {useEffect, useState} from 'react'
-
+import React from 'react'
 
 type InfoProps = {
    detail: Password
 }
 
-const Info = ({detail}:InfoProps) =>{
+const Info:React.FC<InfoProps> = ({
+   detail
+}) =>{
    useEffect(()=>{
       setShowPassword(false)
    },[detail])

@@ -1,7 +1,8 @@
 import LogoImage from '../assets/lock.png'
 import {NavLink} from 'react-router-dom'
+import React from 'react'
 
-const Nav =  function() {
+const Nav:React.FC =  ()=> {
    return (
       <div className="h-full bg-black-light border-r-2 border-black">
          <img src={LogoImage} alt="logo" className="w-20 m-auto my-4"/>

@@ -1,18 +1,19 @@
 import {Password} from '@/types/Objects'
 import Search from '@/components/Search'
+import React from 'react'
 
-type AllItemsProps = {
+
+type ItemsProps = {
    setDetail: Function
    detail: Password | boolean 
    passwords: Password[]
 }
 
-const AllItems =  ({
+const AllItems:React.FC<ItemsProps> = ({
    setDetail, 
    detail,
    passwords
-}:AllItemsProps)=> {
-   
+})=> {
    return (
       <div className="h-full border-r-2 border-black p-3 pt-6">
          <div className="mb-4 flex text-mainGrey">

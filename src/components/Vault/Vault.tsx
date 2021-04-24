@@ -2,6 +2,7 @@ import {Fragment, useState} from 'react'
 import Items from './Items/Items'
 import Detail from './Detail/Detail'
 import {Password} from '../../types/Objects'
+import React from 'react'
 
 type VaultProps = {
    favorites: Password[]
@@ -9,14 +10,12 @@ type VaultProps = {
    passwords: Password[]
 }
 
-const Vault =  ({
+const Vault:React.FC<VaultProps> =  ({
    favorites, 
    addFavorites,
    passwords
-}:VaultProps)=> {
+})=> {
    const [detail, setDetail] = useState<Password | false>(false)
-   console.log('rendering vault')
-   console.log(detail)
    return (
       <Fragment>
          <Items
