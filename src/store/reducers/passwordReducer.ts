@@ -13,20 +13,32 @@ const initialState = {
    passwords: [
       {
          url: 'www.google.com',
-         username: 'locdragon@gmail.com',
+         username:  'locdragon@gmail.com',
          password: 'test1',
          name: 'Google'
       },
       {
          url: 'www.instagram.com',
-         username: 'locdragon@gmail.com',
+         username:  'locdragon@gmail.com',
          password: 'test1',
          name: 'Instagram'
-      }
+      },
+      {
+         url: 'www.facebook.com',
+         username:  'locdragon@gmail.com',
+         password: 'test3',
+         name: 'Facebook'
+      },
+      {
+         url: 'www.dribbble.com',
+         username:  'locdragon@gmail.com',
+         password: 'test4',
+         name: 'Dribble'
+      },
    ]
 }
 
-export const passwordReducer = (
+const passwordReducer = (
    state: PasswordState = initialState, 
    action: Action
 ) =>{
@@ -41,3 +53,5 @@ export const passwordReducer = (
          return state
    }
 }
+
+export default passwordReducer
