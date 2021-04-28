@@ -4,21 +4,22 @@ import {Password} from '../../../types/Objects'
 import Edit from '@/components/Icons/Edit'
 import Delete from '@/components/Icons/Delete'
 import React from 'react'
+import {useSelector} from 'react-redux'
 
 type DetailProps = {
    detail: Password
-   favorites: Password[]
-   addFavorites: Function
 }
 
 const Detail: React.FC<DetailProps> = ({
    detail, 
-   favorites, 
-   addFavorites
 }) => {
    const containerStyles: CSS.Properties = {
       maxWidth: '500px'
    }
+   const {favorites} = useSelector<{favorites:{
+      favorites: Password[]
+   }}>((state)=>state.favorites)
+   console.log(test)
    const inFavorites = favorites.find(x=>JSON.stringify(x)===JSON.stringify(detail))
 
    return (

@@ -5,14 +5,10 @@ import {Password} from '../../types/Objects'
 import React from 'react'
 
 type VaultProps = {
-   favorites: Password[]
-   addFavorites: Function
    passwords: Password[]
 }
 
 const Vault:React.FC<VaultProps> =  ({
-   favorites, 
-   addFavorites,
    passwords
 })=> {
    const [detail, setDetail] = useState<Password | false>(false)
@@ -26,8 +22,6 @@ const Vault:React.FC<VaultProps> =  ({
          {detail && 
             <Detail
                detail={detail}
-               favorites={favorites}
-               addFavorites={addFavorites}
             />
          }
       </Fragment>

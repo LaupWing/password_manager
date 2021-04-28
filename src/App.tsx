@@ -4,6 +4,7 @@ import AllItems from './routes/AllItems'
 import Favorites from './routes/Favorites'
 import {Switch, Route} from 'react-router-dom'
 import {Password} from './types/Objects'
+import {useSelector} from 'react-redux'
 
 function App() {
    const [favorites, setFavorites] = useState<Password[]>([
@@ -20,6 +21,8 @@ function App() {
          name: 'Instagram'
       }
    ])
+   const test = useSelector<Password[]>((state)=>state)
+   console.log(test)
 
    const addFavorites = (item:Password)=>{
       if(favorites.find(x=>x===item)){
