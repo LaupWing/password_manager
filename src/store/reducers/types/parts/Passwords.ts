@@ -1,6 +1,6 @@
 import {Password} from '@/types/Objects'
 
-export interface PasswordState{
+export interface PasswordsState{
    passwords: Password[]
 }
 

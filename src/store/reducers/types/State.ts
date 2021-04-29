@@ -1,7 +1,9 @@
-import {PasswordState} from './parts/Passwords'
-import {FavoriteState} from './parts/Favorites'
+import {PasswordsState} from './parts/Passwords'
+import {FavoritesState} from './parts/Favorites'
+import {MessagesState} from './parts/Messages'
 
 export interface State{
-   passwords: PasswordState
-   favorites: FavoriteState
+   passwords: PasswordsState
+   favorites: FavoritesState
+   messages: MessagesState
 }

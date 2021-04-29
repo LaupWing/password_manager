@@ -1,10 +1,10 @@
-import {Password} from '@/types/Objects'
+import {Message} from '@/types/Objects'
 
-export interface MessageState{
-   messages: Password[]
+export interface MessagesState{
+   messages: Message[]
 }
 
 export type Action ={
    type: 'ADD_MESSAGE',
-   payload: Password
+   payload: Message
 }

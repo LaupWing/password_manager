@@ -4,3 +4,7 @@ export interface Password {
    password: string
    name: string
 }
+
+export interface Message {
+   text: string
+}

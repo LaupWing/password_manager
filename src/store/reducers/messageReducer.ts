@@ -1,30 +1,23 @@
-import {Action, FavoriteState} from './types/parts/Favorites'
+import {Action, MessagesState} from './types/parts/Messages'
 
 const initialState = {
    messages: []
 }
 
-const favoritesReducer = (
-   // state: FavoriteState = initialState, 
-   // action: Action
+const messagesReducer = (
+   state: MessagesState = initialState, 
+   action: Action
 ) =>{
-   // switch(action.type){
-   //    case 'TOGGLE_FAVORITE':{
-   //       const alreadyInFavorites = state.favorites.find(x=>JSON.stringify(x) === JSON.stringify(action.payload))
-   //       if(alreadyInFavorites){
-   //          return {
-   //             ...state,
-   //             favorites: state.favorites.filter(x=>JSON.stringify(x)!== JSON.stringify(action.payload))
-   //          }
-   //       }
-   //       return {
-   //          ...state,
-   //          favorites: [...state.favorites, action.payload]
-   //       }
-   //    }
-   //    default:
-   //       return state
-   // }
+   switch(action.type){
+      case 'ADD_MESSAGE':{
+         return {
+            ...state,
+            messages: [...state.messages, action.payload]
+         }
+      }
+      default:
+         return state
+   }
 }
 
-export default favoritesReducer
+export default messagesReducer

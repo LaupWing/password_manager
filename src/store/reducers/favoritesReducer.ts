@@ -1,4 +1,4 @@
-import {Action, FavoriteState} from './types/parts/Favorites'
+import {Action, FavoritesState} from './types/parts/Favorites'
 
 const initialState = {
    favorites: [
@@ -18,7 +18,7 @@ const initialState = {
 }
 
 export const favoritesReducer = (
-   state: FavoriteState = initialState, 
+   state: FavoritesState = initialState, 
    action: Action
 ) =>{
    switch(action.type){

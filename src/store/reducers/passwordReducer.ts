@@ -1,4 +1,4 @@
-import {PasswordState, Action} from './types/parts/Passwords'
+import {PasswordsState, Action} from './types/parts/Passwords'
 
 const initialState = {
    passwords: [
@@ -30,7 +30,7 @@ const initialState = {
 }
 
 export const passwordReducer = (
-   state: PasswordState = initialState, 
+   state: PasswordsState = initialState, 
    action: Action
 ) =>{
    switch(action.type){
