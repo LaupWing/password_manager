@@ -39,8 +39,6 @@ const AllItems: React.FC<AllItemsProps> = ({
    ]
    return (
       <Vault
-         favorites={favorites}
-         addFavorites={addFavorites}
          passwords={passwords}
       />
    );

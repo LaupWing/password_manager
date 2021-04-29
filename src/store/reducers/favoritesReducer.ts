@@ -1,13 +1,4 @@
-import {Password} from '@/types/Objects'
-
-interface FavoriteState{
-   favorites: Password[]
-}
-
-type Action ={
-   type: 'ADD_FAVORITE',
-   payload: Password
-}
+import {Action, FavoriteState} from './types/parts/Favorite'
 
 const initialState = {
    favorites: [

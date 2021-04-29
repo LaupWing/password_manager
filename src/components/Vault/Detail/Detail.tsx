@@ -4,6 +4,7 @@ import {Password} from '../../../types/Objects'
 import Edit from '@/components/Icons/Edit'
 import Delete from '@/components/Icons/Delete'
 import React from 'react'
+import {FavoriteState} from '@/store/reducers/favoritesReducer'
 import {useSelector} from 'react-redux'
 
 type DetailProps = {
@@ -16,15 +17,13 @@ const Detail: React.FC<DetailProps> = ({
    const containerStyles: CSS.Properties = {
       maxWidth: '500px'
    }
-   const {favorites} = useSelector<{favorites:{
-      favorites: Password[]
-   }}>((state)=>state.favorites)
-   console.log(test)
-   const inFavorites = favorites.find(x=>JSON.stringify(x)===JSON.stringify(detail))
+   const {favorites} = useSelector<FavoriteState, FavoriteState>((state)=>state.favorites)
+   console.log(favorites)
+   // const inFavorites = favorites.find(x=>JSON.stringify(x)===JSON.stringify(detail))
 
    return (
       <div className="flex-1 flex justify-center items-start py-4 px-2 pt-6">
-         <div
+         {/* <div
             className="flex flex-col w-full"
             style={containerStyles}
          >
@@ -50,7 +49,7 @@ const Detail: React.FC<DetailProps> = ({
                </div>
                <svg 
                   className={`w-8 h-8 my-auto ml-auto ${inFavorites ? 'fill-current text-yellow-400' : ''} cursor-pointer hover:text-yellow-400`}
-                  onClick={()=>addFavorites(detail)} 
+                  // onClick={()=>addFavorites(detail)} 
                   fill="none" 
                   stroke={inFavorites ? "none" : "currentColor"} 
                   viewBox="0 0 24 24" 
@@ -68,7 +67,7 @@ const Detail: React.FC<DetailProps> = ({
             <Info
                detail={detail}
             />
-         </div>
+         </div> */}
       </div>
    )
 }

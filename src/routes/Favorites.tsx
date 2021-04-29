@@ -8,13 +8,10 @@ type AllItemsProps = {
 }
 
 const AllItems:React.FC<AllItemsProps> = ({
-   favorites,
-   addFavorites
+   favorites
 }) => {
    return (
       <Vault
-         favorites={favorites}
-         addFavorites={addFavorites}
          passwords={favorites}
       />
    );

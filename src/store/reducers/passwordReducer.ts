@@ -1,13 +1,4 @@
-import {Password} from '@/types/Objects'
-
-interface PasswordState{
-   passwords: Password[]
-}
-
-type Action ={
-   type: 'ADD_PASSWORD',
-   payload: Password
-}
+import {PasswordState, Action} from './types/parts/Password'
 
 const initialState = {
    passwords: [
