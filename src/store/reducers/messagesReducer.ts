@@ -4,7 +4,7 @@ const initialState = {
    messages: []
 }
 
-const messagesReducer = (
+export const messagesReducer = (
    state: MessagesState = initialState, 
    action: Action
 ) =>{
@@ -19,5 +19,3 @@ const messagesReducer = (
          return state
    }
 }
-
-export default messagesReducer

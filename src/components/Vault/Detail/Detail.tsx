@@ -5,7 +5,7 @@ import Edit from '@/components/Icons/Edit'
 import Delete from '@/components/Icons/Delete'
 import React from 'react'
 import {State} from '@/store/reducers/types/State'
-import {FavoriteState} from '@/store/reducers/types/parts/Favorites'
+import {FavoritesState} from '@/store/reducers/types/parts/Favorites'
 import {useSelector, useDispatch} from 'react-redux'
 
 type DetailProps = {
@@ -18,7 +18,7 @@ const Detail: React.FC<DetailProps> = ({
    const containerStyles: CSS.Properties = {
       maxWidth: '500px'
    }
-   const {favorites} = useSelector<State, FavoriteState>((state)=>state.favorites)
+   const {favorites} = useSelector<State, FavoritesState>((state)=>state.favorites)
    const dispatch = useDispatch()
    const inFavorites = favorites.find(x=>JSON.stringify(x)===JSON.stringify(detail))
    const addFavorites = (password: Password) =>{
