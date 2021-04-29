@@ -1,10 +1,7 @@
-import {useState} from 'react'
 import Nav from './Nav/Nav'
 import AllItems from './routes/AllItems'
 import Favorites from './routes/Favorites'
 import {Switch, Route} from 'react-router-dom'
-import {Password} from './types/Objects'
-import {useSelector} from 'react-redux'
 
 function App() {
    const routes = (

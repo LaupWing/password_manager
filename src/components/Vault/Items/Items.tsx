@@ -1,7 +1,7 @@
 import {Password} from '@/types/Objects'
 import Search from '@/components/Search'
 import React from 'react'
-
+import Item from './Item/Item'
 
 type ItemsProps = {
    setDetail: Function
@@ -29,20 +29,12 @@ const AllItems:React.FC<ItemsProps> = ({
          </div>
          <ul className="text-white text-sm">
             {passwords.map((password,i) =>(
-               <li 
-                  className={`w-80 flex items-center my-2 p-3 cursor-pointer rounded-md ${JSON.stringify(password) === JSON.stringify(detail) ? 'bg-blue-600' : 'hover:bg-black-lightest'}`}
+               <Item 
+                  password={password}
+                  detail={detail}
                   key={i}
-                  onClick={()=>setDetail(password)}
-               >
-                  <img 
-                     src={`https://logo.clearbit.com/${password.url}`}
-                     className="w-10 rounded-md mr-2"
-                  />
-                  <div>
-                     <h2 className="text-base font-bold tracking-wider">{password.name}</h2>
-                     <p className="text-xs text-gray-400">{password.username}</p>
-                  </div>
-               </li>
+                  setDetail={setDetail}
+               />
             ))
             }
          </ul>
