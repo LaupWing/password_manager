@@ -5,7 +5,7 @@ import Edit from '@/components/Icons/Edit'
 import Delete from '@/components/Icons/Delete'
 import React from 'react'
 import {State} from '@/store/reducers/types/State'
-import {FavoriteState} from '@/store/reducers/types/parts/Favorite'
+import {FavoriteState} from '@/store/reducers/types/parts/Favorites'
 import {useSelector, useDispatch} from 'react-redux'
 
 type DetailProps = {

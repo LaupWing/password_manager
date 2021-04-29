@@ -21,6 +21,7 @@ const Item:React.FC<ItemProps> = ({
          <img 
             src={`https://logo.clearbit.com/${password.url}`}
             className="w-10 rounded-md mr-2"
+            alt={password.url}
          />
          <div>
             <h2 className="text-base font-bold tracking-wider">{password.name}</h2>
