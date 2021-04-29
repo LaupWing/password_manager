@@ -4,7 +4,8 @@ import {Password} from '../../../types/Objects'
 import Edit from '@/components/Icons/Edit'
 import Delete from '@/components/Icons/Delete'
 import React from 'react'
-import {FavoriteState} from '@/store/reducers/favoritesReducer'
+import {State} from '@/store/reducers/types/State'
+import {FavoriteState} from '@/store/reducers/types/parts/Favorite'
 import {useSelector} from 'react-redux'
 
 type DetailProps = {
@@ -17,13 +18,13 @@ const Detail: React.FC<DetailProps> = ({
    const containerStyles: CSS.Properties = {
       maxWidth: '500px'
    }
-   const {favorites} = useSelector<FavoriteState, FavoriteState>((state)=>state.favorites)
+   const {favorites} = useSelector<State, FavoriteState>((state)=>state.favorites)
    console.log(favorites)
-   // const inFavorites = favorites.find(x=>JSON.stringify(x)===JSON.stringify(detail))
+   const inFavorites = favorites.find(x=>JSON.stringify(x)===JSON.stringify(detail))
 
    return (
       <div className="flex-1 flex justify-center items-start py-4 px-2 pt-6">
-         {/* <div
+         <div
             className="flex flex-col w-full"
             style={containerStyles}
          >
@@ -67,7 +68,7 @@ const Detail: React.FC<DetailProps> = ({
             <Info
                detail={detail}
             />
-         </div> */}
+         </div>
       </div>
    )
 }
