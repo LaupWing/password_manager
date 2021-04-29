@@ -22,7 +22,14 @@ const favoritesReducer = (
    action: Action
 ) =>{
    switch(action.type){
-      case 'ADD_FAVORITE':{
+      case 'TOGGLE_FAVORITE':{
+         const alreadyInFavorites = state.favorites.find(x=>JSON.stringify(x) === JSON.stringify(action.payload))
+         if(alreadyInFavorites){
+            return {
+               ...state,
+               favorites: state.favorites.filter(x=>JSON.stringify(x)!== JSON.stringify(action.payload))
+            }
+         }
          return {
             ...state,
             favorites: [...state.favorites, action.payload]

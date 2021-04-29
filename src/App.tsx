@@ -7,41 +7,13 @@ import {Password} from './types/Objects'
 import {useSelector} from 'react-redux'
 
 function App() {
-   const [favorites, setFavorites] = useState<Password[]>([
-      {
-         url: 'www.google.com',
-         username: 'locdragon@gmail.com',
-         password: 'test1',
-         name: 'Google'
-      },
-      {
-         url: 'www.instagram.com',
-         username: 'locdragon@gmail.com',
-         password: 'test1',
-         name: 'Instagram'
-      }
-   ])
-   const test = useSelector<Password[]>((state)=>state)
-   console.log(test)
-
-   const addFavorites = (item:Password)=>{
-      if(favorites.find(x=>x===item)){
-         setFavorites(favorites.filter(x=>x!==item))
-      }else{
-         setFavorites([...favorites, item])
-      }
-      console.log(favorites)
-   }
    const routes = (
       <Switch>
          <Route 
             path="/" 
             exact
             component={()=>(
-               <AllItems
-                  favorites={favorites}
-                  addFavorites={addFavorites}
-               />
+               <AllItems/>
             )}
          />
          <Route 
@@ -49,8 +21,6 @@ function App() {
             exact
             component={()=>(
                <Favorites
-                  favorites={favorites}
-                  addFavorites={addFavorites}
                />
             )}
          />

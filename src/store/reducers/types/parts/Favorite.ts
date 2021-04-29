@@ -5,6 +5,6 @@ export interface FavoriteState{
 }
 
 export type Action ={
-   type: 'ADD_FAVORITE',
+   type: 'TOGGLE_FAVORITE',
    payload: Password
 }

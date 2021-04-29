@@ -1,16 +1,8 @@
 import Vault from '@/components/Vault/Vault'
-import React from 'react'
 import {Password} from '@/types/Objects'
 
-type AllItemsProps = {
-   favorites: Password[]
-   addFavorites: Function
-}
 
-const AllItems: React.FC<AllItemsProps> = ({
-      favorites, 
-      addFavorites
-   })=> {
+const AllItems = ()=> {
    const passwords:Password[] = [
       {
          url: 'www.google.com',

@@ -6,7 +6,7 @@ import Delete from '@/components/Icons/Delete'
 import React from 'react'
 import {State} from '@/store/reducers/types/State'
 import {FavoriteState} from '@/store/reducers/types/parts/Favorite'
-import {useSelector} from 'react-redux'
+import {useSelector, useDispatch} from 'react-redux'
 
 type DetailProps = {
    detail: Password
@@ -19,8 +19,14 @@ const Detail: React.FC<DetailProps> = ({
       maxWidth: '500px'
    }
    const {favorites} = useSelector<State, FavoriteState>((state)=>state.favorites)
-   console.log(favorites)
+   const dispatch = useDispatch()
    const inFavorites = favorites.find(x=>JSON.stringify(x)===JSON.stringify(detail))
+   const addFavorites = (password: Password) =>{
+      dispatch({
+         type: 'TOGGLE_FAVORITE',
+         payload: password
+      })
+   }
 
    return (
       <div className="flex-1 flex justify-center items-start py-4 px-2 pt-6">
@@ -50,7 +56,7 @@ const Detail: React.FC<DetailProps> = ({
                </div>
                <svg 
                   className={`w-8 h-8 my-auto ml-auto ${inFavorites ? 'fill-current text-yellow-400' : ''} cursor-pointer hover:text-yellow-400`}
-                  // onClick={()=>addFavorites(detail)} 
+                  onClick={()=>addFavorites(detail)} 
                   fill="none" 
                   stroke={inFavorites ? "none" : "currentColor"} 
                   viewBox="0 0 24 24" 
