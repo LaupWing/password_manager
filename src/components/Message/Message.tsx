@@ -1,6 +1,14 @@
-const Message = () =>(
+import React from 'react'
+
+interface MessageProps {
+   message: string
+}
+
+const Message:React.FC<MessageProps> = ({
+   message
+}) =>(
    <div>
-      test
+      {message}
    </div>
 )
 

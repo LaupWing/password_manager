@@ -34,7 +34,9 @@ function App() {
    return (
       <div className="App w-screen h-screen bg-black-default flex">
          {messages.map(msg=>(
-            <Message/>
+            <Message
+               message={msg.text}
+            />
          ))
          }
          <Nav/>
