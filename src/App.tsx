@@ -3,7 +3,13 @@ import AllItems from './routes/AllItems'
 import Favorites from './routes/Favorites'
 import {Switch, Route} from 'react-router-dom'
 
+import {MessagesState} from '@/store/reducers/types/parts/Messages'
+import {useSelector} from 'react-redux'
+import {State} from '@/store/reducers/types/State'
+
 function App() {
+   const {messages} = useSelector<State, MessagesState>((state)=>state.messages)
+   console.log(messages)
    const routes = (
       <Switch>
          <Route 
