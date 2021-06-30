@@ -26,6 +26,12 @@ const initialState = {
          password: 'test4',
          name: 'Dribble'
       },
+      {
+         url: 'www.digid.com',
+         username:  'locdragon@gmail.com',
+         password: 'test4',
+         name: 'DigID'
+      },
    ]
 }
 
