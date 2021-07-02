@@ -29,10 +29,16 @@ const AllItems = ()=> {
          name: 'Dribble'
       },
       {
-         url: 'www.digid.com',
+         url: 'digid.nl',
          username:  'locdragon@gmail.com',
          password: 'test4',
          name: 'DigID'
+      },
+      {
+         url: 'marktplaats.nl',
+         username:  'locdragon@gmail.com',
+         password: 'test4',
+         name: 'Marktplaats'
       },
    ]
    return (
